@@ -1,0 +1,366 @@
+:root {
+    --bg-color: #FFFBE6;      /* 背景：薄いクリーム色 */
+    --text-color: #2D3436;    /* 文字：濃いグレー */
+    --card-bg: #ffffff;       /* カード：白 */
+    --accent-color: #FF9F43;  /* アクセント：ビタミンオレンジ */
+    --border-radius: 30px;    /* 丸みを強めにして可愛く */
+    --gap: 24px;
+    --font-main: 'Poppins', 'M PLUS Rounded 1c', sans-serif; /* 丸文字 */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none; /* デフォルトカーソルを消す */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Bento Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--gap);
+    margin-bottom: 80px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.hero-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    background-color: #333; /* ダークモード風 */
+    color: #fff;
+}
+
+.hero-card h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.about-card {
+    grid-column: 2 / 3;
+}
+
+.social-card {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.tags span {
+    display: inline-block;
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin: 5px 5px 0 0;
+    color: #333;
+}
+
+/* Works & Playground Grids */
+.section-wrapper {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+.works-grid, .playground-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap);
+}
+
+.work-item {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    opacity: 0; /* アニメーション前は隠す */
+    transform: translateY(30px);
+}
+
+.work-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.work-content {
+    padding: 20px;
+}
+
+.work-cat {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.work-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.work-desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 10px;
+    height: 10px;
+    background: var(--text-color);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-follower {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+}
+
+.cursor.active {
+    transform: translate(-50%, -50%) scale(0.5);
+    background: var(--accent-color);
+}
+
+.cursor-follower.active {
+    transform: translate(-50%, -50%) scale(1.5);
+    border-color: var(--accent-color);
+    background: rgba(255, 107, 107, 0.1);
+}
+
+/* SP Responsive */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-card {
+        grid-row: auto;
+    }
+    .cursor, .cursor-follower {
+        display: none; /* スマホではカスタムカーソル無効 */
+    }
+    * {
+        cursor: auto;
+    }
+}
+/* パターンA専用：むにゅっと押せるアクション */
+.card:active, .work-item:active, .btn:active {
+    transform: scale(0.95) translateY(0) !important;
+    transition: transform 0.1s;
+}
+/* Googleフォーム誘導用のデザイン調整 */
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 上下に要素を分散 */
+    align-items: flex-start;
+    /* もしカードが小さすぎる場合は高さを指定してもOK */
+    /* min-height: 250px; */ 
+}
+
+.contact-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.contact-btn {
+    width: 100%;
+    text-align: center;
+    background-color: var(--accent-color); /* アクセントカラー */
+    color: #fff;
+    padding: 15px;
+    border-radius: 50px; /* 丸いボタン */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 文字と矢印の間隔 */
+    transition: transform 0.2s;
+}
+
+.contact-btn:hover {
+    transform: scale(1.02); /* ホバー時に少し大きくなる */
+    opacity: 0.9;
+}
+/* === スマホ表示の緊急修正 === */
+
+/* 1. 横スクロールを強制的に禁止する */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* 横にはみ出た分は見えなくする */
+}
+
+@media (max-width: 768px) {
+    /* 2. 全体の余白を少し狭めて、使えるスペースを増やす */
+    .container {
+        padding: 30px 15px; /* 左右の余白を20px→15pxに */
+        width: 100%;
+    }
+
+    /* 3. Heroエリアの巨大文字をスマホ用に小さくする */
+    .hero-card h2 {
+        font-size: 2rem; /* PCでは3remだったのを小さく */
+        line-height: 1.3;
+        word-break: break-word; /* 長い単語があれば強制的に折り返す */
+    }
+
+    /* 4. カードのレイアウト崩れ防止 */
+    .main-grid {
+        display: flex;       /* GridからFlexに変えて縦積みに */
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* 5. 画像の縦横比がおかしくなるのを防ぐ */
+    .work-img {
+        height: auto;
+        aspect-ratio: 16/9; /* スマホでは見やすい比率に固定 */
+    }
+}/* === スマホ用ヘッダー修正 === */
+@media (max-width: 768px) {
+    /* 1. ヘッダーを縦並びにする */
+    .header {
+        flex-direction: column; /* 横並び解除 → 縦並びに */
+        gap: 15px;              /* ロゴとメニューの間隔 */
+        margin-bottom: 30px;    /* 本文との間隔 */
+    }
+
+    /* 2. メニューを中央揃えにする */
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* 真ん中に寄せる */
+        gap: 20px;               /* 文字同士の間隔 */
+    }
+
+    /* 3. 余計な余白を消して整える */
+    .nav a {
+        margin-left: 0; /* PC用の左余白をリセット */
+        font-size: 0.85rem; /* 少しだけ文字を小さくして収まりよく */
+    }
+}
+/* === SNSボタンのデザイン (Xのみ) === */
+.social-card {
+    /* カード内の配置を調整 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px; /* 高さを出して押しやすく */
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+    width: 100%; /* 横幅いっぱいに広げる */
+}
+
+.social-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* X (Twitter) の色：黒背景・白文字 */
+.x-btn {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000; /* 背景がアクセントカラーの場合に見やすくする枠線 */
+}

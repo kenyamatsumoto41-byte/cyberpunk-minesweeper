@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業情報 | 法人売却バンク</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --color-navy: #0F172A;
+            --color-gold: #B49B67;
+            --color-bg: #F8F9FA;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.8;
+            background-color: var(--color-bg);
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* 会社概要テーブルのスタイル */
+        .company-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        .company-table th {
+            text-align: left;
+            padding: 20px;
+            background-color: #F8FAFC;
+            border-bottom: 1px solid #E2E8F0;
+            width: 30%;
+            font-weight: bold;
+            color: var(--color-navy);
+        }
+        .company-table td {
+            padding: 20px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        @media (max-width: 768px) {
+            .company-table th, .company-table td {
+                display: block;
+                width: 100%;
+            }
+            .company-table th {
+                border-bottom: none;
+                padding-bottom: 5px;
+            }
+            .company-table td {
+                padding-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fixed w-full top-0 z-50 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                    <div class="w-8 h-8 bg-[#0F172A] flex items-center justify-center text-[#B49B67] font-serif font-bold text-lg">B</div>
+                    <span class="font-serif font-bold text-base text-slate-900">法人売却バンク</span>
+                </a>
+            </div>
+            <button class="md:hidden text-slate-900">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-[#B49B67] transition">トップ</a>
+                <a href="service.html" class="hover:text-[#B49B67] transition">事業内容</a>
+                <a href="company.html" class="text-[#B49B67] font-bold">企業情報</a>
+                <a href="contact.html" class="bg-[#0F172A] text-white px-5 py-2 hover:bg-[#B49B67] transition">無料査定</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        
+        <section class="bg-[#0F172A] text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-gray-900"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <p class="text-[#B49B67] text-xs font-bold tracking-[0.2em] uppercase mb-4">COMPANY PROFILE</p>
+                <h1 class="text-3xl md:text-4xl font-serif font-medium">企業情報</h1>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="flex flex-col md:flex-row gap-12 items-start">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-gray-200 aspect-[3/4] relative overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="代表者写真" class="object-cover w-full h-full grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                        <div class="mt-4 text-center md:text-left">
+                            <p class="text-xs text-gray-500 mb-1">代表取締役 CEO</p>
+                            <p class="text-xl font-serif font-bold text-[#0F172A]">山田 太郎</p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-2/3">
+                        <h2 class="text-2xl md:text-3xl font-serif text-[#0F172A] mb-8 leading-relaxed">
+                            「撤退」を「敗北」にしない。<br>
+                            次世代へのバトンタッチを支援します。
+                        </h2>
+                        <div class="space-y-6 text-slate-600 leading-loose">
+                            <p>
+                                日本には現在、素晴らしい技術や顧客基盤を持ちながらも、後継者不在や一時的な業績不振により、廃業の危機にある企業が数多く存在します。
+                            </p>
+                            <p>
+                                私たち法人売却バンクは、「休眠会社」「赤字会社」に特化したM&A仲介を通じて、それらの企業に眠る資産価値を再定義し、意欲ある次世代の経営者へとつなぐ架け橋となります。
+                            </p>
+                            <p>
+                                過去を清算し、未来を創る。その重要な決断に、私たちはプロフェッショナルとしての誇りと責任を持って伴走いたします。
+                            </p>
+                        </div>
+                        <div class="mt-10 font-serif text-2xl text-[#B49B67] italic">Taro Yamada</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#F8F9FA]">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-serif text-[#0F172A] mb-3">会社概要</h3>
+                    <div class="w-12 h-0.5 bg-[#B49B67] mx-auto"></div>
+                </div>
+
+                <div class="bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] border-t-4 border-[#0F172A]">
+                    <table class="company-table">
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社 法人売却バンク<br><span class="text-xs text-gray-400">（Hojin Baikyaku Bank Inc.）</span></td>
+                        </tr>
+                        <tr>
+                            <th>設立</th>
+                            <td>2015年 4月</td>
+                        </tr>
+                        <tr>
+                            <th>資本金</th>
+                            <td>5,000万円</td>
+                        </tr>
+                        <tr>
+                            <th>代表者</th>
+                            <td>代表取締役 山田 太郎</td>
+                        </tr>
+                        <tr>
+                            <th>所在地</th>
+                            <td>
+                                〒100-0005<br>
+                                東京都千代田区丸の内1-1-1 大手町タワー 25F
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>事業内容</th>
+                            <td>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>M&A仲介事業（休眠・赤字・債務超過案件特化）</li>
+                                    <li>企業価値算定・デューデリジェンス業務</li>
+                                    <li>PMI（統合プロセス）支援コンサルティング</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>取引銀行</th>
+                            <td>三菱UFJ銀行、三井住友銀行、みずほ銀行</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-serif text-[#0F172A] mb-3">アクセス</h3>
+                    <div class="w-12 h-0.5 bg-[#B49B67] mx-auto"></div>
+                </div>
+                
+                <div class="w-full h-96 bg-gray-200 mb-8 border border-gray-300 shadow-sm relative z-0">
+                    <iframe 
+                        title="Google Map"
+                        src="https://maps.google.com/maps?q=東京都千代田区丸の内1-1-1+大手町タワー&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8 justify-center text-sm text-slate-600">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-[#B49B67] shrink-0"></i>
+                        <div>
+                            <span class="font-bold text-[#0F172A]">住所</span><br>
+                            〒100-0005<br>
+                            東京都千代田区丸の内1-1-1 大手町タワー 25F
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="train" class="w-5 h-5 text-[#B49B67] shrink-0"></i>
+                        <div>
+                            <span class="font-bold text-[#0F172A]">電車でお越しの方</span><br>
+                            東京メトロ「大手町駅」直結<br>
+                            JR「東京駅」丸の内北口より徒歩5分
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-[#0F172A] text-white text-center">
+            <div class="container mx-auto px-6">
+                <h3 class="font-serif text-2xl mb-6">M&Aに関するご相談・査定は無料です</h3>
+                <a href="contact.html" class="inline-block bg-[#B49B67] text-white px-10 py-3 font-medium hover:bg-white hover:text-[#0F172A] transition duration-300">
+                    お問い合わせはこちら
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0B1120] text-slate-400 py-16 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 bg-slate-800 flex items-center justify-center text-[#B49B67] font-serif font-bold">B</div>
+                        <span class="text-white font-serif font-medium text-lg">法人売却バンク</span>
+                    </div>
+                    <p class="text-xs leading-relaxed">
+                        〒100-0005<br>
+                        東京都千代田区丸の内1-1-1<br>
+                        大手町タワー 25F
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Services</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="service.html" class="hover:text-white transition">M&A仲介支援</a></li>
+                        <li><a href="service.html" class="hover:text-white transition">企業価値算定</a></li>
+                        <li><a href="cases.html" class="hover:text-white transition">成約事例</a></li>
+                        <li><a href="flow.html" class="hover:text-white transition">ご利用の流れ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="company.html" class="hover:text-white transition">会社概要</a></li>
+                        <li><a href="company.html" class="hover:text-white transition">代表挨拶</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">よくある質問</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="contact.html" class="hover:text-white transition">お問い合わせ</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">プライバシーポリシー</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex justify-between items-center text-xs">
+                <p>&copy; 2024 Hojin Baikyaku Bank. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

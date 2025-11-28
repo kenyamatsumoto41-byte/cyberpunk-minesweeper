@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ご利用の流れ・費用 | 法人売却バンク</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --color-navy: #0F172A;
+            --color-gold: #B49B67;
+            --color-bg: #F8F9FA;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.8;
+            background-color: var(--color-bg);
+        }
+
+        h1, h2, h3, .serif-font {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* 料金プロセスのビジュアル */
+        .fee-process-bar {
+            background: linear-gradient(90deg, #E2E8F0 0%, #E2E8F0 80%, var(--color-gold) 80%, var(--color-gold) 100%);
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            top: 24px;
+            z-index: 0;
+        }
+        
+        /* スタイリッシュなステップカード */
+        .step-card {
+            background: white;
+            border-left: 4px solid var(--color-gold);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .step-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+        }
+
+        /* 背景の巨大数字 */
+        .step-bg-number {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 6rem; /* スマホ用に少し小さく調整 */
+            font-weight: 900;
+            color: #F1F5F9;
+            position: absolute;
+            right: -10px;
+            bottom: -30px;
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+        }
+        @media (min-width: 768px) {
+            .step-bg-number {
+                font-size: 8rem;
+                right: -20px;
+                bottom: -40px;
+            }
+        }
+
+        /* 接続線 */
+        .vertical-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #CBD5E1;
+            z-index: 0;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--color-navy);
+            border-radius: 50%;
+            position: absolute;
+            left: 15px;
+            top: 40px;
+            z-index: 10;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--color-navy);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fixed w-full top-0 z-50 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                    <div class="w-8 h-8 bg-[#0F172A] flex items-center justify-center text-[#B49B67] font-serif font-bold text-lg">B</div>
+                    <span class="font-serif font-bold text-base text-slate-900">法人売却バンク</span>
+                </a>
+            </div>
+            <button class="md:hidden text-slate-900">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-[#B49B67] transition">トップ</a>
+                <a href="service.html" class="hover:text-[#B49B67] transition">事業内容</a>
+                <a href="cases.html" class="hover:text-[#B49B67] transition">成約事例</a>
+                <a href="flow.html" class="text-[#B49B67] font-bold">ご利用の流れ</a>
+                <a href="faq.html" class="hover:text-[#B49B67] transition">よくある質問</a>
+                <a href="contact.html" class="bg-[#0F172A] text-white px-5 py-2 hover:bg-[#B49B67] transition">無料査定</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        
+        <section class="bg-[#0F172A] text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <p class="text-[#B49B67] text-xs font-bold tracking-[0.2em] uppercase mb-4">PROCESS & FEES</p>
+                <h1 class="text-3xl md:text-4xl font-serif font-medium">ご利用の流れ・費用</h1>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl font-serif text-[#0F172A] mb-4">完全成功報酬システム</h2>
+                    <p class="text-slate-600">
+                        着手金・月額報酬・中間金は一切いただきません。<br>
+                        成約して初めて費用が発生する、オーナー様にリスクのない仕組みです。
+                    </p>
+                </div>
+
+                <div class="relative pt-12 pb-6 px-4 hidden md:block">
+                    <div class="fee-process-bar rounded-full"></div>
+                    <div class="flex justify-between relative z-10">
+                        <div class="text-center w-1/4">
+                            <div class="w-12 h-12 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-gray-400 font-bold">1</div>
+                            <p class="font-bold text-sm text-gray-500">ご相談・査定</p>
+                            <p class="text-lg font-bold text-[#0F172A] mt-1">0円</p>
+                        </div>
+                        <div class="text-center w-1/4">
+                            <div class="w-12 h-12 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-gray-400 font-bold">2</div>
+                            <p class="font-bold text-sm text-gray-500">買い手探索</p>
+                            <p class="text-lg font-bold text-[#0F172A] mt-1">0円</p>
+                        </div>
+                        <div class="text-center w-1/4">
+                            <div class="w-12 h-12 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-gray-400 font-bold">3</div>
+                            <p class="font-bold text-sm text-gray-500">条件交渉</p>
+                            <p class="text-lg font-bold text-[#0F172A] mt-1">0円</p>
+                        </div>
+                        <div class="text-center w-1/4">
+                            <div class="w-14 h-14 bg-[#0F172A] border-4 border-[#B49B67] rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg text-white -mt-1">
+                                <i data-lucide="check" class="w-6 h-6"></i>
+                            </div>
+                            <p class="font-bold text-sm text-[#0F172A]">成約・決済</p>
+                            <p class="text-lg font-bold text-[#B49B67] mt-1">成功報酬</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:hidden space-y-4">
+                    <div class="bg-[#F8F9FA] p-5 border-l-4 border-gray-300 rounded-r-lg flex justify-between items-center">
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold mb-1">STEP 1 - 4</span>
+                            <span class="font-bold text-gray-700">相談〜最終契約直前</span>
+                        </div>
+                        <span class="text-2xl font-bold text-[#0F172A]">0<span class="text-sm">円</span></span>
+                    </div>
+                    <div class="bg-[#0F172A] p-5 border-l-4 border-[#B49B67] rounded-r-lg flex justify-between items-center shadow-lg relative overflow-hidden">
+                        <div class="relative z-10">
+                            <span class="block text-xs text-[#B49B67] font-bold mb-1">STEP 5 (GOAL)</span>
+                            <span class="font-bold text-white">成約時のみ発生</span>
+                        </div>
+                        <div class="text-right relative z-10">
+                             <span class="text-lg font-bold text-[#B49B67]">成功報酬</span>
+                             <span class="block text-[10px] text-gray-400">（譲渡額の5%〜）</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#F8F9FA]">
+            <div class="container mx-auto px-6 max-w-3xl relative">
+                
+                <div class="vertical-line hidden md:block"></div>
+
+                <div class="space-y-12">
+                    
+                    <article class="step-card p-6 md:p-10 md:ml-12">
+                        <span class="step-bg-number">01</span>
+                        <div class="dot hidden md:block"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-4">
+                                <h3 class="text-lg md:text-2xl font-serif font-bold text-[#0F172A]">お問い合わせ・無料査定</h3>
+                                <span class="w-fit bg-[#E2E8F0] text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Free / 無料</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                フォームよりお問い合わせください。決算書（直近3期分）をご用意いただければ、最短即日で「いくらで売れそうか」の概算査定額をお伝えします。
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs font-bold text-[#B49B67]">
+                                <span class="flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3 h-3"></i> 匿名相談可</span>
+                                <span class="flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3 h-3"></i> 秘密厳守</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="step-card p-6 md:p-10 md:ml-12">
+                        <span class="step-bg-number">02</span>
+                        <div class="dot hidden md:block"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-4">
+                                <h3 class="text-lg md:text-2xl font-serif font-bold text-[#0F172A]">詳細ヒアリング・提携契約</h3>
+                                <span class="w-fit bg-[#E2E8F0] text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Free / 無料</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                正式に進める場合、秘密保持契約（NDA）とアドバイザリー契約を締結します。<br class="hidden md:block">
+                                簿外債務や訴訟リスクなど、マイナス面も含めてヒアリングを行い、買い手に提出する詳細資料（ノンネームシート）を作成します。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="step-card p-6 md:p-10 md:ml-12">
+                        <span class="step-bg-number">03</span>
+                        <div class="dot hidden md:block"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-4">
+                                <h3 class="text-lg md:text-2xl font-serif font-bold text-[#0F172A]">マッチング・トップ面談</h3>
+                                <span class="w-fit bg-[#E2E8F0] text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Free / 無料</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                候補企業を選定し、打診します。興味を持った買い手企業と、経営者同士の面談（トップ面談）を行います。<br class="hidden md:block">
+                                条件だけでなく、経営理念や従業員の処遇についてもすり合わせを行います。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="step-card p-6 md:p-10 md:ml-12">
+                        <span class="step-bg-number">04</span>
+                        <div class="dot hidden md:block"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-4">
+                                <h3 class="text-lg md:text-2xl font-serif font-bold text-[#0F172A]">基本合意・デューデリジェンス</h3>
+                                <span class="w-fit bg-[#E2E8F0] text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Free / 無料</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                大枠の条件で合意した後、買い手側による買収監査（デューデリジェンス）が行われます。<br class="hidden md:block">
+                                弊社が資料準備をサポートし、スムーズな進行を助けます。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="step-card p-6 md:p-10 md:ml-12 border-l-[#0F172A] bg-[#0F172A] text-white">
+                        <span class="step-bg-number text-gray-800">05</span>
+                        <div class="dot hidden md:block bg-[#B49B67] border-[#0F172A]"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-4">
+                                <h3 class="text-lg md:text-2xl font-serif font-bold text-[#B49B67]">成約・決済（クロージング）</h3>
+                                <span class="w-fit bg-[#B49B67] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fee / 報酬発生</span>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                最終譲渡契約書を締結し、代金の決済と株式の移転を行います。<br class="hidden md:block">
+                                ここで初めて、成功報酬として手数料を頂戴いたします。
+                            </p>
+                            <div class="inline-block border border-[#B49B67] px-4 py-2 text-xs text-[#B49B67]">
+                                <span class="font-bold">主な納品物：</span> 株式譲渡契約書、株主名簿書き換え、印鑑等の引渡し
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white text-center">
+            <div class="container mx-auto px-6">
+                <h3 class="font-serif text-2xl md:text-3xl text-[#0F172A] mb-6">まずは「ステップ1」から。</h3>
+                <p class="text-slate-500 mb-10">費用の心配はありません。あなたの会社の価値を知ることから始めましょう。</p>
+                <a href="contact.html" class="inline-block bg-[#0F172A] text-white px-10 py-4 font-medium tracking-widest hover:bg-[#B49B67] transition duration-300 shadow-xl">
+                    無料査定を申し込む
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0B1120] text-slate-400 py-16 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 bg-slate-800 flex items-center justify-center text-[#B49B67] font-serif font-bold">B</div>
+                        <span class="text-white font-serif font-medium text-lg">法人売却バンク</span>
+                    </div>
+                    <p class="text-xs leading-relaxed">
+                        〒100-0005<br>
+                        東京都千代田区丸の内1-1-1<br>
+                        大手町タワー 25F
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Services</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="service.html" class="hover:text-white transition">M&A仲介支援</a></li>
+                        <li><a href="service.html" class="hover:text-white transition">企業価値算定</a></li>
+                        <li><a href="cases.html" class="hover:text-white transition">成約事例</a></li>
+                        <li><a href="flow.html" class="hover:text-white transition">ご利用の流れ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="company.html" class="hover:text-white transition">会社概要</a></li>
+                        <li><a href="company.html" class="hover:text-white transition">代表挨拶</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">よくある質問</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="contact.html" class="hover:text-white transition">お問い合わせ</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">プライバシーポリシー</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex justify-between items-center text-xs">
+                <p>&copy; 2024 Hojin Baikyaku Bank. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

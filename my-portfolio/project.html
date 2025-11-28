@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT DETAIL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS --- */
+        body {
+            margin: 0; padding: 0;
+            font-family: "Noto Sans JP", sans-serif;
+            background-color: #f4f4f4; color: #333;
+        }
+        
+        /* ヘッダー（トップと同じ） */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            padding: 20px 40px; box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.8); color: white;
+            z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo a { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+
+        /* 詳細ページのメイン画像エリア */
+        .page-header {
+            height: 60vh; /* 画面の60%の高さ */
+            background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; color: white;
+        }
+        .page-header::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .page-title { position: relative; z-index: 1; text-align: center; }
+        .page-title h1 { font-size: 3rem; margin: 0; }
+
+        /* 本文エリア */
+        .content {
+            max-width: 800px; /* 読みやすいように幅を狭く */
+            margin: 80px auto; padding: 0 20px;
+            line-height: 1.8; /* 行間を広めに */
+        }
+        .content h2 { font-size: 1.8rem; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .content p { margin-bottom: 20px; font-size: 1rem; }
+        
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-block; margin-top: 40px;
+            padding: 15px 40px; background-color: #333; color: white;
+            text-decoration: none; border-radius: 50px; transition: background 0.3s;
+        }
+        .back-btn:hover { background-color: #555; }
+
+        /* フッター */
+        footer { background-color: #1a1a1a; color: #888; text-align: center; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">SHIMZ STYLE</a></div>
+    </header>
+
+    <div class="page-header">
+        <div class="page-title">
+            <h1>PROJECT NAME</h1>
+            <p>プロジェクトの詳細</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>コンセプト</h2>
+        <p>ここにプロジェクトの詳細な説明が入ります。テキストは読みやすいように、横幅を少し狭く設定しています。フォントはNoto Sans JPを使用しているため、長文でも美しく表示されます。</p>
+        <p>デザインのポイントは、余白を活かすことです。写真は大きく、文字は整然と配置することで、プロフェッショナルな印象を与えます。</p>
+
+        <h2>ギャラリー</h2>
+        <img src="https://picsum.photos/id/48/800/500" style="width:100%; margin: 20px 0;">
+        <p>現場の風景や、完成予想図などをここに配置します。</p>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">TOPに戻る</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio Site.</p>
+    </footer>
+
+</body>
+</html>

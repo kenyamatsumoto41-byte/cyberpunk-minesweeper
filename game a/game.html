@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>青色クリックゲーム</title>
+    <style>
+        /* --- ここから見た目の設定 --- */
+        body {
+            text-align: center;
+            /* 背景を薄い水色に変更 */
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            /* 文字色を少し濃い青系に変更 */
+            color: #003366;
+        }
+        #game-area {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: white;
+            /* 枠線を濃い青に変更 */
+            border: 3px solid #00008b;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        #target {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            /* ターゲットの色を「青」に変更 */
+            background-color: #007bff;
+            border-radius: 50%;
+            cursor: pointer;
+            top: 175px;
+            left: 175px;
+            transition: all 0.1s;
+            /* 少し立体感を出す影を追加 */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        h1 { margin-top: 20px; }
+        p { font-size: 20px; font-weight: bold; }
+        /* --- ここまで見た目の設定 --- */
+    </style>
+</head>
+<body>
+
+    <h1>青色クリックゲーム</h1>
+    <p>スコア: <span id="score">0</span></p>
+    
+    <div id="game-area">
+        <div id="target"></div>
+    </div>
+
+    <script>
+        // JavaScript：ゲームのロジック（動き）
+        // ※ここは前回と同じです
+        const target = document.getElementById('target');
+        const scoreDisplay = document.getElementById('score');
+        
+        let score = 0;
+
+        target.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = score;
+
+            const x = Math.random() * 350;
+            const y = Math.random() * 350;
+
+            target.style.left = x + 'px';
+            target.style.top = y + 'px';
+            
+            // ※クリックすると色々な色に変わります。
+            // もし「クリック後も青系の色のまま」が良い場合は教えてください！
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            target.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>

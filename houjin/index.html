@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法人売却バンク | Strategic M&A Partners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* ベース設定 */
+        :root {
+            --color-navy: #0F172A; /* Deep Navy */
+            --color-gold: #B49B67; /* Muted Gold */
+            --color-light: #F8F9FA;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* アニメーション */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ゴールドのアクセントライン */
+        .gold-line {
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+
+        /* 高級感のあるボタン */
+        .btn-gold {
+            background-color: var(--color-navy);
+            color: white;
+            border: 1px solid var(--color-navy);
+            font-family: 'Noto Sans JP', sans-serif;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-color: white;
+            color: var(--color-navy);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            font-family: 'Noto Sans JP', sans-serif;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--color-navy);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                    <div class="w-10 h-10 bg-[#0F172A] flex items-center justify-center text-[#B49B67] font-serif font-bold text-xl">B</div>
+                    <div>
+                        <h1 class="font-serif font-bold text-lg text-slate-900 leading-none">法人売却バンク</h1>
+                        <p class="text-[10px] text-gray-500 tracking-widest uppercase mt-1">Strategic M&A Partners</p>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="service.html" class="hover:text-[#B49B67] transition relative group">事業内容</a>
+                <a href="cases.html" class="hover:text-[#B49B67] transition relative group">成約事例</a>
+                <a href="flow.html" class="hover:text-[#B49B67] transition relative group">ご利用の流れ</a>
+                <a href="faq.html" class="hover:text-[#B49B67] transition relative group">よくある質問</a>
+                <a href="company.html" class="hover:text-[#B49B67] transition relative group">企業情報</a>
+            </nav>
+
+            <a href="contact.html" class="bg-[#B49B67] text-white px-6 py-2.5 text-sm font-medium hover:bg-[#9A8455] transition ease-in-out shadow-md">
+                無料査定
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-screen min-h-[600px] bg-[#0F172A] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/90 to-transparent"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 text-center md:text-left flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-3/5 text-white">
+                    <p class="text-[#B49B67] tracking-[0.2em] text-xs md:text-sm font-bold mb-4 md:mb-6 fade-in-up">M&A INNOVATION FOR DORMANT ASSETS</p>
+                    
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight mb-6 md:mb-8 fade-in-up delay-100">
+                        休眠資産に、<br>
+                        <span class="border-b-2 border-[#B49B67] pb-1 md:pb-2 inline-block">公正な価値</span>と未来を。
+                    </h2>
+                    
+                    <p class="text-slate-300 text-sm md:text-lg leading-relaxed mb-8 md:mb-10 max-w-xl mx-auto md:mx-0 fade-in-up delay-200">
+                        「終わり」ではなく、次なる「始まり」のために。<br class="hidden md:block">
+                        赤字・休眠法人のM&Aに特化した専門家チームが、<br class="hidden md:block">
+                        高度な知見とネットワークで、貴社の資産価値を最大化します。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start fade-in-up delay-300">
+                        <a href="contact.html" class="btn-gold bg-[#B49B67] border-[#B49B67] text-center px-8 py-3 md:px-10 md:py-4 text-sm md:text-base font-bold">
+                            無料査定を依頼する
+                        </a>
+                        <a href="contact.html" class="btn-outline text-center px-8 py-3 md:px-10 md:py-4 text-sm md:text-base font-bold">
+                            買い手企業の方はこちら
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                
+                <div class="max-w-6xl mx-auto bg-[#F8F9FA] border border-gray-100 p-8 md:p-20 relative overflow-hidden">
+                    
+                    <span class="absolute top-0 left-0 text-[8rem] md:text-[12rem] font-black text-gray-200 opacity-20 leading-none select-none pointer-events-none -translate-x-10 -translate-y-10 font-sans">
+                        VISION
+                    </span>
+
+                    <div class="relative z-10 flex flex-col md:flex-row gap-12 md:gap-24 items-start md:items-center justify-center">
+                        
+                        <div class="w-full md:w-auto flex justify-center md:block">
+                            <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl text-[#0F172A] leading-loose tracking-[0.2em]
+                                       text-center md:text-left
+                                       md:[writing-mode:vertical-rl] md:[text-orientation:upright] md:h-[420px]
+                                       border-b-2 md:border-b-0 md:border-l-4 border-[#B49B67] 
+                                       pb-6 md:pb-0 md:pl-8">
+                                経営者の決断に、<br>
+                                敬意と正解を。
+                            </h3>
+                        </div>
+
+                        <div class="w-full md:flex-1 max-w-xl">
+                            <p class="text-[#B49B67] text-xs font-bold tracking-[0.2em] uppercase mb-6 hidden md:block">OUR PHILOSOPHY</p>
+                            
+                            <div class="text-slate-600 text-sm md:text-base leading-loose space-y-6 font-medium">
+                                <p>
+                                    長年守り抜いてきた会社を譲渡する。<br>
+                                    それは、経営者にとって人生最大の決断の一つです。<br>
+                                    私たちは、単なる「売買の仲介」にとどまりません。
+                                </p>
+                                <p>
+                                    財務諸表には表れない企業の歴史や強みを読み解き、
+                                    休眠・赤字という現状の先にある「潜在的な価値」を評価します。
+                                    信頼できる買い手とのマッチングを通じて、
+                                    事業の、そして経営者様の新たな一歩を支援いたします。
+                                </p>
+                            </div>
+
+                            <div class="flex flex-row gap-12 mt-12 pt-8 border-t border-gray-200">
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase tracking-wider mb-2">平均成約期間</p>
+                                    <p class="text-4xl font-serif font-bold text-[#0F172A]">24<span class="text-sm ml-1 text-slate-500 font-sans font-medium">日</span></p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase tracking-wider mb-2">適正審査実施率</p>
+                                    <p class="text-4xl font-serif font-bold text-[#0F172A]">100<span class="text-sm ml-1 text-slate-500 font-sans font-medium">%</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#F8F9FA]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-[#B49B67] text-xs font-bold tracking-[0.2em] uppercase mb-3">Our Expertise</p>
+                    <h3 class="font-serif text-3xl text-slate-900">専門領域とサービス</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 shadow-sm hover:shadow-xl transition duration-300 border-t-2 border-transparent hover:border-[#B49B67]">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-[#0F172A]">
+                            <i data-lucide="scale" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-serif text-xl mb-4 text-slate-900">M&A仲介支援</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            赤字・債務超過・休眠会社に特化。一般的なM&A業者では取り扱いが難しい案件も、独自のスキームで成約へ導きます。
+                        </p>
+                        <a href="service.html" class="text-[#B49B67] text-sm font-medium hover:underline flex items-center gap-1">詳細を見る <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+
+                    <div class="bg-white p-10 shadow-sm hover:shadow-xl transition duration-300 border-t-2 border-transparent hover:border-[#B49B67]">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-[#0F172A]">
+                            <i data-lucide="calculator" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-serif text-xl mb-4 text-slate-900">企業価値算定</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            決算書データを精緻に分析。繰越欠損金や許認可の価値を含めた適正価格を算出します。
+                        </p>
+                        <a href="service.html" class="text-[#B49B67] text-sm font-medium hover:underline flex items-center gap-1">詳細を見る <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+
+                    <div class="bg-white p-10 shadow-sm hover:shadow-xl transition duration-300 border-t-2 border-transparent hover:border-[#B49B67]">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-[#0F172A]">
+                            <i data-lucide="file-check" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-serif text-xl mb-4 text-slate-900">再生コンサルティング</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            PMI（統合支援）や事業再生コンサルティング。売却後の引き継ぎや、買い手企業との融合を支援します。
+                        </p>
+                        <a href="service.html" class="text-[#B49B67] text-sm font-medium hover:underline flex items-center gap-1">詳細を見る <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-[#B49B67] text-xs font-bold tracking-[0.2em] uppercase mb-3">SUCCESS CASES</p>
+                    <h3 class="font-serif text-3xl text-slate-900">最新の成約事例</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="border border-gray-200 p-8 flex flex-col justify-between hover:border-[#B49B67] transition">
+                        <div>
+                            <div class="flex gap-2 mb-4">
+                                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1">休眠会社</span>
+                                <span class="bg-[#B49B67] text-white text-xs font-bold px-2 py-1">スピード成約</span>
+                            </div>
+                            <h4 class="font-serif text-lg font-bold text-[#0F172A] mb-3">法人口座が高評価。休眠会社を2週間で売却。</h4>
+                            <p class="text-sm text-gray-600">維持費に悩んでいた休眠会社が、メガバンク口座の価値を評価され100万円で成約。</p>
+                        </div>
+                        <a href="cases.html" class="text-[#B49B67] text-sm font-bold mt-4 hover:underline">詳しく見る →</a>
+                    </div>
+                    <div class="border border-gray-200 p-8 flex flex-col justify-between hover:border-[#B49B67] transition">
+                        <div>
+                            <div class="flex gap-2 mb-4">
+                                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1">製造業</span>
+                                <span class="bg-red-100 text-red-600 text-xs font-bold px-2 py-1">赤字・債務超過</span>
+                            </div>
+                            <h4 class="font-serif text-lg font-bold text-[#0F172A] mb-3">債務超過の工場を事業譲渡。従業員の雇用を維持。</h4>
+                            <p class="text-sm text-gray-600">廃業寸前だった金属加工工場を、大手メーカーが技術力を評価し子会社化。</p>
+                        </div>
+                        <a href="cases.html" class="text-[#B49B67] text-sm font-bold mt-4 hover:underline">詳しく見る →</a>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="cases.html" class="inline-block border border-[#0F172A] text-[#0F172A] px-8 py-3 text-sm font-medium hover:bg-[#0F172A] hover:text-white transition">
+                        すべての成約事例を見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#0F172A] text-white text-center">
+            <div class="container mx-auto px-6">
+                <h3 class="font-serif text-3xl md:text-4xl mb-6">その会社の価値を、正しく知ることから。</h3>
+                <p class="text-slate-300 mb-10 text-lg">
+                    査定は無料です。秘密厳守で、専門のコンサルタントが対応いたします。
+                </p>
+                <a href="contact.html" class="inline-block bg-[#B49B67] text-white px-10 py-4 font-medium tracking-widest hover:bg-white hover:text-[#0F172A] transition duration-300">
+                    無料査定を申し込む
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0B1120] text-slate-400 py-16 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 bg-slate-800 flex items-center justify-center text-[#B49B67] font-serif font-bold">B</div>
+                        <span class="text-white font-serif font-medium text-lg">法人売却バンク</span>
+                    </div>
+                    <p class="text-xs leading-relaxed">
+                        〒100-0005<br>
+                        東京都千代田区丸の内1-1-1<br>
+                        大手町タワー 25F
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Services</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="service.html" class="hover:text-white transition">M&A仲介支援</a></li>
+                        <li><a href="service.html" class="hover:text-white transition">企業価値算定</a></li>
+                        <li><a href="cases.html" class="hover:text-white transition">成約事例</a></li>
+                        <li><a href="flow.html" class="hover:text-white transition">ご利用の流れ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="company.html" class="hover:text-white transition">会社概要</a></li>
+                        <li><a href="company.html" class="hover:text-white transition">代表挨拶</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">よくある質問</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="contact.html" class="hover:text-white transition">お問い合わせ</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">プライバシーポリシー</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex justify-between items-center text-xs">
+                <p>&copy; 2024 Hojin Baikyaku Bank. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

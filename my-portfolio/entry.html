@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTRY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS --- */
+        body {
+            margin: 0; padding: 0;
+            font-family: "Noto Sans JP", sans-serif;
+            background-color: #f4f4f4; color: #333;
+        }
+        
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            padding: 20px 40px; box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.8); color: white;
+            z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo a { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+
+        /* メイン画像（スタートラインや扉をイメージさせる写真） */
+        .page-header {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; color: white;
+        }
+        .page-header::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .page-title { position: relative; z-index: 1; text-align: center; }
+        .page-title h1 { font-size: 3rem; margin: 0; }
+
+        .content {
+            max-width: 800px; margin: 80px auto; padding: 0 20px;
+            line-height: 1.8;
+        }
+        .content h2 { font-size: 1.8rem; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .content p { margin-bottom: 20px; font-size: 1rem; }
+
+        /* 募集要項のテーブルデザイン */
+        .job-table {
+            width: 100%; border-collapse: collapse; margin: 30px 0;
+            background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .job-table th, .job-table td {
+            padding: 20px; border-bottom: 1px solid #eee; text-align: left;
+        }
+        .job-table th {
+            width: 30%; background-color: #f9f9f9; font-weight: bold;
+        }
+        /* スマホ対応：テーブルを縦並びに */
+        @media (max-width: 600px) {
+            .job-table th, .job-table td { display: block; width: 100%; box-sizing: border-box; }
+            .job-table th { background-color: #333; color: white; }
+        }
+
+        /* 巨大なエントリーボタン */
+        .entry-button-area {
+            text-align: center; margin: 60px 0; padding: 40px;
+            background-color: white; border-radius: 10px;
+        }
+        .entry-btn-large {
+            display: inline-block;
+            padding: 20px 60px;
+            background-color: #cc0000; /* 目立つ赤色 */
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px rgba(204, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .entry-btn-large:hover {
+            transform: translateY(-5px); /* ホバーで少し浮く */
+            box-shadow: 0 15px 30px rgba(204, 0, 0, 0.4);
+            background-color: #aa0000;
+        }
+
+        .back-btn {
+            display: inline-block; margin-top: 40px;
+            padding: 15px 40px; background-color: #333; color: white;
+            text-decoration: none; border-radius: 50px; transition: background 0.3s;
+        }
+        .back-btn:hover { background-color: #555; }
+
+        footer { background-color: #1a1a1a; color: #888; text-align: center; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">SHIMZ STYLE</a></div>
+    </header>
+
+    <div class="page-header">
+        <div class="page-title">
+            <h1>ENTRY</h1>
+            <p>採用情報・エントリー</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>募集要項</h2>
+        <p>現在、以下の職種で新しい仲間を募集しています。経験よりも意欲を重視します。私たちと一緒に未来を作りましょう。</p>
+        
+        <table class="job-table">
+            <tr>
+                <th>募集職種</th>
+                <td>施工管理職 / 設計職 / 営業職</td>
+            </tr>
+            <tr>
+                <th>勤務地</th>
+                <td>東京本社（現場によっては全国出張あり）</td>
+            </tr>
+            <tr>
+                <th>勤務時間</th>
+                <td>8:00 〜 17:00（実働8時間）</td>
+            </tr>
+            <tr>
+                <th>給与</th>
+                <td>月給 25万円〜（経験・能力を考慮の上決定）</td>
+            </tr>
+            <tr>
+                <th>休日・休暇</th>
+                <td>完全週休2日制（土日祝）、夏季休暇、年末年始</td>
+            </tr>
+            <tr>
+                <th>選考フロー</th>
+                <td>書類選考 → 一次面接 → 最終面接 → 内定</td>
+            </tr>
+        </table>
+
+        <div class="entry-button-area">
+            <h3 style="margin-top: 0;">応募はこちらから</h3>
+            <p>Webフォームより必要事項を入力してご応募ください。<br>3営業日以内に担当者よりご連絡いたします。</p>
+            
+            <a href="#" class="entry-btn-large">エントリーフォームへ</a>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">TOPに戻る</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio Site.</p>
+    </footer>
+
+</body>
+</html>

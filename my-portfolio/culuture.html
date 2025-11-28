@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CULTURE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS --- */
+        body {
+            margin: 0; padding: 0;
+            font-family: "Noto Sans JP", sans-serif;
+            background-color: #f4f4f4; color: #333;
+        }
+        
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            padding: 20px 40px; box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.8); color: white;
+            z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo a { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+
+        /* メイン画像（チームワークを感じさせる写真） */
+        .page-header {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; color: white;
+        }
+        .page-header::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .page-title { position: relative; z-index: 1; text-align: center; }
+        .page-title h1 { font-size: 3rem; margin: 0; }
+
+        .content {
+            max-width: 800px; margin: 80px auto; padding: 0 20px;
+            line-height: 1.8;
+        }
+        .content h2 { font-size: 1.8rem; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .content p { margin-bottom: 20px; font-size: 1rem; }
+
+        /* バリュー（価値観）のリスト */
+        .value-list {
+            display: flex; gap: 20px; margin: 30px 0;
+        }
+        .value-item {
+            background: white; padding: 20px; flex: 1; text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;
+        }
+        .value-item h3 { color: #000; margin-bottom: 10px; font-size: 1.2rem; }
+        .value-item p { font-size: 0.9rem; color: #666; }
+
+        /* スマホ対応：バリューを縦並びに */
+        @media (max-width: 768px) {
+            .value-list { flex-direction: column; }
+        }
+
+        .back-btn {
+            display: inline-block; margin-top: 40px;
+            padding: 15px 40px; background-color: #333; color: white;
+            text-decoration: none; border-radius: 50px; transition: background 0.3s;
+        }
+        .back-btn:hover { background-color: #555; }
+
+        footer { background-color: #1a1a1a; color: #888; text-align: center; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">SHIMZ STYLE</a></div>
+    </header>
+
+    <div class="page-header">
+        <div class="page-title">
+            <h1>CULTURE</h1>
+            <p>企業文化・環境</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>私たちの価値観（VALUES）</h2>
+        <p>私たちは、技術力だけでなく「チームワーク」と「挑戦する心」を大切にしています。年齢や役職に関係なく、自由に意見を言い合えるフラットな組織文化が根付いています。</p>
+        
+        <div class="value-list">
+            <div class="value-item">
+                <h3>Challenge</h3>
+                <p>失敗を恐れず、<br>新しいことに挑戦する</p>
+            </div>
+            <div class="value-item">
+                <h3>Respect</h3>
+                <p>互いの個性を認め合い、<br>敬意を持つ</p>
+            </div>
+            <div class="value-item">
+                <h3>Enjoy</h3>
+                <p>仕事も遊びも、<br>全力で楽しむ</p>
+            </div>
+        </div>
+
+        <h2>働く環境</h2>
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" style="width:100%; margin: 20px 0; border-radius: 8px;">
+        <p>オフィスはフリーアドレス制を採用しており、その日の気分や業務内容に合わせて好きな場所で働けます。また、カフェスペースや集中ブースも完備しており、メリハリのある働き方が可能です。</p>
+        <p>リモートワークと出社を組み合わせた「ハイブリッドワーク」も導入しており、ライフスタイルに合わせた柔軟な働き方を推奨しています。</p>
+
+        <h2>社内イベント</h2>
+        <p>仕事だけでなく、社員同士の交流も活発です。バーベキュー大会、スポーツ大会、季節ごとのパーティーなど、部署を超えたコミュニケーションの場が多くあります。</p>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">TOPに戻る</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio Site.</p>
+    </footer>
+
+</body>
+</html>

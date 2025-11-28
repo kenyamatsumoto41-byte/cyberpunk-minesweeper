@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCESS MAP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; font-family: "Noto Sans JP", sans-serif; background-color: #f4f4f4; color: #333; }
+        header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 40px; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.8); color: white; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .logo a { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+
+        .page-header {
+            height: 50vh;
+            background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2144&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; color: white;
+        }
+        .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); }
+        .page-title { position: relative; z-index: 1; text-align: center; }
+        .page-title h1 { font-size: 3rem; margin: 0; }
+
+        .content { max-width: 800px; margin: 80px auto; padding: 0 20px; }
+        .content h2 { font-size: 1.8rem; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+
+        /* Googleマップの埋め込みエリア */
+        .map-container {
+            width: 100%; height: 400px; background: #ddd; margin-top: 20px;
+            border-radius: 8px; overflow: hidden;
+        }
+        iframe { width: 100%; height: 100%; border: 0; }
+
+        .access-info { background: white; padding: 30px; margin-top: 20px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .access-row { display: flex; border-bottom: 1px solid #eee; padding: 15px 0; }
+        .access-row:last-child { border-bottom: none; }
+        .access-label { width: 120px; font-weight: bold; color: #555; }
+        
+        .back-btn { display: inline-block; margin-top: 40px; padding: 15px 40px; background-color: #333; color: white; text-decoration: none; border-radius: 50px; }
+        footer { background-color: #1a1a1a; color: #888; text-align: center; padding: 40px 0; }
+        @media (max-width: 600px) { .access-row { flex-direction: column; } .access-label { margin-bottom: 5px; } }
+    </style>
+</head>
+<body>
+    <header><div class="logo"><a href="index.html">SHIMZ STYLE</a></div></header>
+
+    <div class="page-header">
+        <div class="page-title"><h1>ACCESS</h1><p>アクセス・拠点</p></div>
+    </div>
+
+    <div class="content">
+        <h2>東京本社</h2>
+        <div class="access-info">
+            <div class="access-row"><div class="access-label">所在地</div><div>〒100-0005<br>東京都千代田区丸の内1-1-1</div></div>
+            <div class="access-row"><div class="access-label">電話番号</div><div>03-1234-5678</div></div>
+            <div class="access-row"><div class="access-label">最寄り駅</div><div>JR「東京駅」丸の内北口より徒歩1分</div></div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030772591!2d139.76454987675685!3d35.68116727258712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1715000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div style="text-align: center;"><a href="index.html" class="back-btn">TOPに戻る</a></div>
+    </div>
+    <footer><p>&copy; 2024 My Portfolio Site.</p></footer>
+</body>
+</html>

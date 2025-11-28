@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; font-family: "Noto Sans JP", sans-serif; background-color: #f4f4f4; color: #333; }
+        header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 40px; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.8); color: white; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .logo a { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+
+        .page-header {
+            height: 50vh; /* ニュースは少し高さ控えめ */
+            background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; color: white;
+        }
+        .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); }
+        .page-title { position: relative; z-index: 1; text-align: center; }
+        .page-title h1 { font-size: 3rem; margin: 0; }
+
+        .content { max-width: 800px; margin: 80px auto; padding: 0 20px; }
+
+        /* ニュースリストのデザイン */
+        .news-list { list-style: none; padding: 0; margin: 0; }
+        .news-item {
+            background: white; padding: 25px; margin-bottom: 15px; border-radius: 5px;
+            border-left: 5px solid #ccc; transition: all 0.3s;
+            display: flex; align-items: center; gap: 20px;
+        }
+        .news-item:hover { border-left-color: #333; transform: translateX(10px); }
+        .news-date { font-weight: bold; color: #666; font-size: 0.9rem; min-width: 100px; }
+        .news-title { font-size: 1.1rem; margin: 0; flex: 1; }
+        .news-tag {
+            background: #eee; padding: 5px 10px; font-size: 0.8rem; border-radius: 4px; color: #555;
+        }
+
+        .back-btn { display: inline-block; margin-top: 40px; padding: 15px 40px; background-color: #333; color: white; text-decoration: none; border-radius: 50px; }
+        footer { background-color: #1a1a1a; color: #888; text-align: center; padding: 40px 0; }
+        @media (max-width: 600px) { .news-item { flex-direction: column; align-items: flex-start; gap: 10px; } }
+    </style>
+</head>
+<body>
+    <header><div class="logo"><a href="index.html">SHIMZ STYLE</a></div></header>
+
+    <div class="page-header">
+        <div class="page-title"><h1>NEWS</h1><p>お知らせ</p></div>
+    </div>
+
+    <div class="content">
+        <ul class="news-list">
+            <li class="news-item">
+                <span class="news-date">2024.04.01</span>
+                <span class="news-tag">お知らせ</span>
+                <h3 class="news-title">2025年度 新卒採用のエントリー受付を開始しました</h3>
+            </li>
+            <li class="news-item">
+                <span class="news-date">2024.03.15</span>
+                <span class="news-tag">実績</span>
+                <h3 class="news-title">「〇〇タワープロジェクト」がグッドデザイン賞を受賞しました</h3>
+            </li>
+            <li class="news-item">
+                <span class="news-date">2024.02.10</span>
+                <span class="news-tag">イベント</span>
+                <h3 class="news-title">社内ハッカソンを開催しました</h3>
+            </li>
+            <li class="news-item">
+                <span class="news-date">2024.01.05</span>
+                <span class="news-tag">ご挨拶</span>
+                <h3 class="news-title">新年のご挨拶</h3>
+            </li>
+        </ul>
+        <div style="text-align: center;"><a href="index.html" class="back-btn">TOPに戻る</a></div>
+    </div>
+    <footer><p>&copy; 2024 My Portfolio Site.</p></footer>
+</body>
+</html>

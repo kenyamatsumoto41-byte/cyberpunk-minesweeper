@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREER PATH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS（デザイン設定） --- */
+        body {
+            margin: 0; padding: 0;
+            font-family: "Noto Sans JP", sans-serif;
+            background-color: #f4f4f4; color: #333;
+        }
+        
+        /* ヘッダー */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            padding: 20px 40px; box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.8); color: white;
+            z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo a { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+
+        /* メイン画像（オフィスでのミーティング風景） */
+        .page-header {
+            height: 60vh;
+            /* 画像を変更：成長や研修をイメージさせる写真 */
+            background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; color: white;
+        }
+        .page-header::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .page-title { position: relative; z-index: 1; text-align: center; }
+        .page-title h1 { font-size: 3rem; margin: 0; }
+
+        /* 本文エリア */
+        .content {
+            max-width: 800px; margin: 80px auto; padding: 0 20px;
+            line-height: 1.8;
+        }
+        .content h2 { font-size: 1.8rem; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .content h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 10px; color: #555; }
+        .content p { margin-bottom: 20px; font-size: 1rem; }
+        
+        /* ステップリストの装飾 */
+        .step-list {
+            list-style: none; padding: 0; margin: 20px 0;
+        }
+        .step-list li {
+            background: white; padding: 20px; margin-bottom: 15px;
+            border-left: 5px solid #333; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .step-list strong { font-size: 1.2rem; display: block; margin-bottom: 5px; }
+
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-block; margin-top: 40px;
+            padding: 15px 40px; background-color: #333; color: white;
+            text-decoration: none; border-radius: 50px; transition: background 0.3s;
+        }
+        .back-btn:hover { background-color: #555; }
+
+        footer { background-color: #1a1a1a; color: #888; text-align: center; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">SHIMZ STYLE</a></div>
+    </header>
+
+    <div class="page-header">
+        <div class="page-title">
+            <h1>CAREER</h1>
+            <p>キャリアパス・教育制度</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>成長を支える仕組み</h2>
+        <p>私たちは、社員一人ひとりの成長が会社の成長につながると信じています。入社直後の新人研修から、リーダーシップ研修、技術習得支援まで、段階に応じた豊富なカリキュラムを用意しています。</p>
+
+        <h2>キャリアステップの例</h2>
+        <p>入社後はOJT（実務研修）を中心に、先輩社員のサポートを受けながらスキルを磨いていきます。</p>
+        
+        <ul class="step-list">
+            <li>
+                <strong>STEP 01：入社〜3年目（メンバー）</strong>
+                基礎的な業務知識を習得し、自立して業務を完遂できる力を身につけます。メンター制度により先輩社員がマンツーマンで指導します。
+            </li>
+            <li>
+                <strong>STEP 02：4年目〜6年目（リーダー）</strong>
+                小規模なプロジェクトの進行管理や、後輩の指導を担当します。チーム全体を見渡す視野を養います。
+            </li>
+            <li>
+                <strong>STEP 03：7年目以降（マネージャー / スペシャリスト）</strong>
+                組織のマネジメントを行う「管理職コース」か、高度な専門技術を極める「専門職コース」かを選択できます。
+            </li>
+        </ul>
+
+        <img src="https://picsum.photos/id/180/800/500" style="width:100%; margin: 20px 0;">
+        <h3>資格取得支援</h3>
+        <p>業務に必要な資格の取得費用は会社が全額負担します。また、合格時には報奨金が支給される制度もあります。</p>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">TOPに戻る</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio Site.</p>
+    </footer>
+
+</body>
+</html>

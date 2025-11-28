@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私のホームページ</title>
+    <style>
+        /* デザインの指定（CSS） */
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-color: #ecf0f1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>素晴らしい未来を一緒に作りましょう</h2>
+        <p>ここはGeminiと一緒に作成した最初のホームページです。</p>
+        <button onclick="alert('こんにちは！')">もっと詳しく</button>
+    </div>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>ここに自己紹介文が入ります。趣味や経歴、サイトの目的などを書きましょう。</p>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Services</h2>
+            <p>提供しているサービスや、活動内容を紹介するエリアです。</p>
+            <ul>
+                <li>Webデザイン</li>
+                <li>写真撮影</li>
+                <li>ブログ執筆</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>お問い合わせはこちらから（現在はダミーです）。</p>
+            <p>Email: example@email.com</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Homepage. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
